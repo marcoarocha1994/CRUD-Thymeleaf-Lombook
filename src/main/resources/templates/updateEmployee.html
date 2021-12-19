@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<form action="#" th:action="@{'/saveUpdateEmployee/'+${employee.get.id}}" th:object="${employee}"
+		method="post">
+		<p>
+			Nome: <input type="text" class="form-control"
+				id="inlineFormInputGroup" th:placeholder="${employee.get.name}"
+				th:field="*{name}" />
+		<p>
+			Salário: <input type="text" class="form-control"
+				id="inlineFormInputGroup" th:placeholder="${employee.get.salary}"/>
+			<button type="submit">Enviar</button>
+	</form>
+</body>
+</html>

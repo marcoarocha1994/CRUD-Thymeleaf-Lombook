@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<form action="#" th:action="@{/saveEmployee/}" th:object="${employee}"
+		method="post">
+		<p>
+			Nome: <input type="text" class="form-control"
+				id="inlineFormInputGroup" placeholder="Saul Goodman"
+				th:field="*{name}" />
+		<p>
+			Salário: <input type="text" class="form-control"
+				id="inlineFormInputGroup" placeholder="200.00" th:field="*{salary}" />
+			<button type="submit">Enviar</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+		<h1>Funcionarios</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nome</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="employee : ${employees}">
+					<td th:text="${employee.id}"></td>
+					<td th:text="${employee.name}"></td>
+					<td><a th:href="'/updateEmployees/'+${employee.id}">Alterar</a></td>
+					<td><a th:href="'/deleteEmployees/'+${employee.id}">Deletar</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<button><a style="text-decoration: none" href="/addEmployees/">Adicionar funcionário</a></button>
+</body>
+</html>
